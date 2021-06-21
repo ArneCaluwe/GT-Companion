@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">GT Companion App</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Jane Doe</string>
+    <string name="nav_header_subtitle">jane.doe@mail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="setDetail_matchName">Match</string>
+    <string name="setDetail_setName">Set</string>
+    <string name="setDetail_timeRemaining">00:00:00</string>
+    <string name="setDetail_startScore">0</string>
+    <string name="setDetail_dash">-</string>
+    <string name="setDetail_athlete1_contentDescription">Athlete 1</string>
+    <string name="setDetail_athlete2_contentDescription">athlete 2</string>
+    <string name="menu_bout">Bouts</string>
+    <string name="button_stop">Pause</string>
+    <string name="button_start">Play</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="fab_content_desc">expand for more options</string>
+    <string name="button_add_right">Right</string>
+    <string name="button_add_left">Left</string>
+    <string name="button_add_both">+1 | +1</string>
+    <string name="fab_edit">Edit score</string>
+    <string name="fab_reorder">reorder sets</string>
+    <string name="fab_toggle_manual">Switch to manual scoring</string>
+    <string name="fab_cancel">Cancel bout</string>
+    <string name="test">\@Strings/start</string>
+    <string name="fab_nextSet">next set</string>
+    <string name="EmptyAthlete">add new</string>
+</resources>

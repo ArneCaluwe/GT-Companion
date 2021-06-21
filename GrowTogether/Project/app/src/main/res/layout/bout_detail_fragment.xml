@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.gt_companion_app.viewmodels.BoutDetailViewModel" />
+        <variable
+            name="adapter"
+            type="com.example.gt_companion_app.adapters.SmallSetDetailAdapter" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="10dp"
+        tools:context=".ui.boutDetail.BoutDetailFragment">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/currentSet"
+                layout="@layout/set_detail_fragment"/>
+
+            <LinearLayout
+                android:id="@+id/manualButtonBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="fill_horizontal"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/boutDetail_addLeft"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/button_add_left"
+                    app:strokeColor="@color/blue_200"/>
+
+                <Button
+                    android:id="@+id/boutDetail_addBoth"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:strokeColor="@color/blue_200"
+                    android:text="@string/button_add_both" />
+
+                <Button
+                    android:id="@+id/boutDetail_addRight"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="@string/button_add_right"
+                    app:strokeColor="@color/blue_200" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_start"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                app:strokeColor="@color/blue_200"
+                android:text="@string/button_start"
+                app:icon="@drawable/ic_play" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/boutDetail_setsList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/set_detail_small_fragment" />
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
+            <com.nambimobile.widgets.efab.ExpandableFabLayout
+                android:id="@+id/expandable_fab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.nambimobile.widgets.efab.ExpandableFab
+                    android:id="@+id/expandable_fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="@dimen/ui_margin_medium"
+                    android:layout_marginEnd="@dimen/ui_margin_medium"
+                    app:efab_color="@color/purple_200"
+                    app:efab_icon="@drawable/ic_plus"
+                    app:efab_iconAnimationRotationDeg="-45"
+                    app:efab_closingAnticipateTension="0"/>
+                <com.nambimobile.widgets.efab.FabOption
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_color="@color/purple_200"
+                    app:fab_icon="@drawable/ic_cancel"
+                    app:label_text="@string/fab_cancel"
+                    app:label_backgroundColor="@color/purple_200"
+                    app:label_textColor="@color/white"/>
+                <com.nambimobile.widgets.efab.FabOption
+                    android:id="@+id/fab_switch_manual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_color="@color/purple_200"
+                    app:fab_icon="@drawable/ic_switch_manual"
+                    app:label_text="@string/fab_toggle_manual"
+                    app:label_backgroundColor="@color/purple_200"
+                    app:label_textColor="@color/white"/>
+                <com.nambimobile.widgets.efab.FabOption
+                    android:id="@+id/fab_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_color="@color/purple_200"
+                    app:label_backgroundColor="@color/purple_200"
+                    app:fab_icon="@drawable/ic_next"
+                    app:label_text="@string/fab_nextSet"
+                    app:label_textColor="@color/white"/>
+                <com.nambimobile.widgets.efab.FabOption
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_color="@color/purple_200"
+                    app:label_backgroundColor="@color/purple_200"
+                    app:fab_icon="@drawable/ic_edit"
+                    app:label_text="@string/fab_edit"
+                    app:label_textColor="@color/white"/>
+            </com.nambimobile.widgets.efab.ExpandableFabLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>

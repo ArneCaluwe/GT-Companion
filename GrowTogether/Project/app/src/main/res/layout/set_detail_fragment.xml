@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="set"
+            type="com.example.gt_companion_app.data.local.sets.Set" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/score_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="15dp"
+            android:background="@drawable/card"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:context=".ui.sets.SetDetailFragment">
+
+            <TextView
+                android:id="@+id/setDetail_match"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/setDetail_matchName"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/blue_300" />
+
+            <TextView
+                android:id="@+id/setDetail_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/setDetail_setName"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/blue_300" />
+
+            <RelativeLayout
+                android:id="@+id/score_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setDetail_athlete1"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_circle_medium"
+                    android:contentDescription="@string/setDetail_athlete1_contentDescription"
+                    android:gravity="center"
+                    android:text="AC"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:src="@tools:sample/avatars" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/setDetail_athlete2"
+                    android:layout_toEndOf="@+id/setDetail_athlete1"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_marginEnd="0dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/setDetail_scoreAthlete1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:paddingStart="20dp"
+                        android:layout_weight="1"
+                        android:padding="0dp"
+                        android:text="@string/setDetail_startScore"
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                        android:textColor="@color/blue_300" />
+
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/setDetail_dash"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+                        android:textSize="40dp"
+                        android:textColor="@color/blue_300" />
+
+                    <TextView
+                        android:id="@+id/setDetail_scoreAthlete2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|end"
+                        android:paddingEnd="20dp"
+                        android:padding="0dp"
+                        android:text="@string/setDetail_startScore"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                        android:textColor="@color/blue_300" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/setDetail_athlete2"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_circle_medium"
+                    android:contentDescription="@string/setDetail_athlete2_contentDescription"
+                    android:gravity="center"
+                    android:text="BC"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:src="@tools:sample/avatars" />
+
+            </RelativeLayout>
+
+            <Chronometer
+                android:id="@+id/countdown_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:countDown="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/blue_300" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/set_textDisplay"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/score_card"
+            android:layout_alignTop="@+id/score_card"
+            android:layout_alignEnd="@+id/score_card"
+            android:layout_alignBottom="@+id/score_card"
+            android:layout_alignParentBottom="false"
+            android:background="@color/white_transparent"
+
+            android:gravity="center"
+            android:text="EEN LANGE TEKST"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
+        <Chronometer
+            android:id="@+id/set_chronoDisplay"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/score_card"
+            android:layout_alignTop="@+id/score_card"
+            android:layout_alignEnd="@+id/score_card"
+            android:layout_alignBottom="@+id/score_card"
+            android:layout_alignParentBottom="false"
+            android:background="@color/white_transparent"
+
+            android:countDown="true"
+
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
+    </RelativeLayout>
+
+</layout>
